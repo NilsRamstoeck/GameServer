@@ -83,9 +83,6 @@ abstract public class GameServer extends WebSocketServer implements GameServerEr
 		GameServer.games = new HashMap<String, HashSet<Client>>();
 		this.NAME = GameServer.properties.getProperty("server.name");
 		this.SQL_GBC_THREAD = this.createGarbageCollectionThread();
-
-		// DEBUGGING OFF
-		Debugger.DEBUG = false;
 	}
 
 	/**

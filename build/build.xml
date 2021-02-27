@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="create_jar" name="Create Jar for Project GameServer">
-    <property name="dir.buildfile" value="."/>
-    <property name="dir.workspace" value="${dir.buildfile}/../.."/>
-    <property name="dir.jarfile" value="C:/Users/nrams/Documents/Java/lib/nasram"/>
-    <target name="create_jar">
-        <jar destfile="${dir.jarfile}/GameServer-1.0.0.jar" filesetmanifest="mergewithoutmain">
-            <fileset dir="${dir.workspace}/GameServer/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/WebSocket/Java-WebSocket-1.5.1.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/JSON/json-20201115.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-api-1.7.9.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-jdk14-1.7.9.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/mySQL_connector/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar"/>
-            <!--zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/nasram-util-1.0.0.jar"/-->
-        </jar>
-        <jar destfile="${dir.jarfile}/GameServer+utils-1.0.0.jar" filesetmanifest="mergewithoutmain">
-            <fileset dir="${dir.workspace}/GameServer/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/WebSocket/Java-WebSocket-1.5.1.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/JSON/json-20201115.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-api-1.7.9.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-jdk14-1.7.9.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/mySQL_connector/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/nasram-util-1.0.0.jar"/>
-        </jar>
-    </target>
+	<property name="dir.buildfile" value="." />
+	<property name="dir.workspace" value="${dir.buildfile}/../.." />
+	<property name="dir.jarfile" value="C:/Users/nrams/Documents/Java/lib/nasram" />
+	<target name="create_jar">
+		<jar destfile="${dir.jarfile}/GameServer-1.0.0.jar" filesetmanifest="mergewithoutmain">
+			<fileset dir="${dir.workspace}/GameServer/bin" />
+			<fileset dir="${dir.workspace}/GameServer/src" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/WebSocket/Java-WebSocket-1.5.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/JSON/json-20201115.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-api-1.7.9.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-jdk14-1.7.9.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/mySQL_connector/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar" />
+		</jar>
+		<jar destfile="${dir.jarfile}/GameServer+utils-1.0.0.jar" filesetmanifest="mergewithoutmain">
+			<fileset dir="${dir.workspace}/GameServer/bin" />
+			<fileset dir="${dir.workspace}/GameServer/src" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/WebSocket/Java-WebSocket-1.5.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/JSON/json-20201115.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-api-1.7.9.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/slf4j/slf4j-jdk14-1.7.9.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Users/nrams/Documents/Java/lib/mySQL_connector/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/nasram-util-1.0.0.jar" />
+		</jar>
+	</target>
 </project>

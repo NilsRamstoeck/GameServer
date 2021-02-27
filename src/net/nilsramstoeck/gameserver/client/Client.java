@@ -3,6 +3,7 @@ package net.nilsramstoeck.gameserver.client;
 
 import org.java_websocket.WebSocket;
 import net.nilsramstoeck.gameserver.message.Message;
+import net.nilsramstoeck.util.debug.Debugger;
 
 /**
  * A Client that is connected to a GameServer
@@ -76,7 +77,7 @@ public class Client {
 	 * @param message Message to be send
 	 */
 	public void send(Message message) {
-		System.out.println("Message to " + this.username + ": " + message);
+		Debugger.debugln("Message to " + this.username + ": " + message);
 		this.socket.send(message.toString());
 	}
 
